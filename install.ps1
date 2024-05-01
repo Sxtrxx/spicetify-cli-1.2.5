@@ -85,7 +85,7 @@ function Get-Spicetify {
     }
     else {
       Write-Host -Object 'Fetching the latest spicetify version...' -NoNewline
-      $latestRelease = Invoke-RestMethod -Uri 'https://api.github.com/repos/spicetify/spicetify-cli/releases/latest'
+      $latestRelease = Invoke-RestMethod -Uri 'https://github.com/spicetify/spicetify-cli/releases/tag/v2.32.1'
       $targetVersion = $latestRelease.tag_name -replace 'v', ''
       Write-Success
     }
